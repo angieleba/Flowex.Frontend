@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Add",
+    "link": "/supplier/add-product"
+  },
+  {
+    "name": "all products",
+    "link": "/supplier"
+  },
+  {
+    "name": "history",
+    "link": "/supplier/history"
+  },
+  {
+    "name": "map",
+    "link": "/map"
+  },
+  {
+    "name": "request",
+    "link": "/supplier/order-request"
+  },
+  {
+    "name": "Ongoing",
+    "link": "/supplier/ongoing-orders"
+  }
+]

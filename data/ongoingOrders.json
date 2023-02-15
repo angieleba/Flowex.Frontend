@@ -1,0 +1,112 @@
+[
+  {
+    "buyer": "Company A",
+    "contact": "xyz@email.com",
+    "price": "€3",
+    "requestDate": "23 Feb 23",
+    "approvalDate": "27 Feb 23",
+    "deliveryDate": "03 Mar 23",
+    "location": "Berlin, Germany",
+    "productID": "P1234",
+    "status": "approved"
+  },
+  {
+    "buyer": "Company A",
+    "contact": "xyz@email.com",
+    "price": "€3",
+    "requestDate": "23 Feb 23",
+    "approvalDate": "27 Feb 23",
+    "deliveryDate": "03 Mar 23",
+    "location": "Berlin, Germany",
+    "productID": "P1234",
+    "status": "pending"
+  },
+  {
+    "buyer": "Company A",
+    "contact": "xyz@email.com",
+    "price": "€3",
+    "requestDate": "23 Feb 23",
+    "approvalDate": "27 Feb 23",
+    "deliveryDate": "03 Mar 23",
+    "location": "Berlin, Germany",
+    "productID": "P1234",
+    "status": "rejected"
+  },
+  {
+    "buyer": "Company A",
+    "contact": "xyz@email.com",
+    "price": "€3",
+    "requestDate": "23 Feb 23",
+    "approvalDate": "27 Feb 23",
+    "deliveryDate": "03 Mar 23",
+    "location": "Berlin, Germany",
+    "productID": "P1234",
+    "status": "approved"
+  },
+  {
+    "buyer": "Company A",
+    "contact": "xyz@email.com",
+    "price": "€3",
+    "requestDate": "23 Feb 23",
+    "approvalDate": "27 Feb 23",
+    "deliveryDate": "03 Mar 23",
+    "location": "Berlin, Germany",
+    "productID": "P1234",
+    "status": "pending"
+  },
+  {
+    "buyer": "Company A",
+    "contact": "xyz@email.com",
+    "price": "€3",
+    "requestDate": "23 Feb 23",
+    "approvalDate": "27 Feb 23",
+    "deliveryDate": "03 Mar 23",
+    "location": "Berlin, Germany",
+    "productID": "P1234",
+    "status": "pending"
+  },
+  {
+    "buyer": "Company A",
+    "contact": "xyz@email.com",
+    "price": "€3",
+    "requestDate": "23 Feb 23",
+    "approvalDate": "27 Feb 23",
+    "deliveryDate": "03 Mar 23",
+    "location": "Berlin, Germany",
+    "productID": "P1234",
+    "status": "approved"
+  },
+  {
+    "buyer": "Company A",
+    "contact": "xyz@email.com",
+    "price": "€3",
+    "requestDate": "23 Feb 23",
+    "approvalDate": "27 Feb 23",
+    "deliveryDate": "03 Mar 23",
+    "location": "Berlin, Germany",
+    "productID": "P1234",
+    "status": "rejected"
+  },
+  {
+    "buyer": "Company A",
+    "contact": "xyz@email.com",
+    "price": "€3",
+    "requestDate": "23 Feb 23",
+    "approvalDate": "27 Feb 23",
+    "deliveryDate": "03 Mar 23",
+    "location": "Berlin, Germany",
+    "productID": "P1234",
+    "status": "approved"
+  },
+  {
+    "buyer": "Company A",
+    "contact": "xyz@email.com",
+    "price": "€3",
+    "requestDate": "23 Feb 23",
+    "approvalDate": "27 Feb 23",
+    "deliveryDate": "03 Mar 23",
+    "location": "Berlin, Germany",
+    "productID": "P1234",
+    "status": "approved"
+  }
+]

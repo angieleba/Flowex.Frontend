@@ -1,0 +1,56 @@
+[
+  {
+    "thumbnail": "/images/placeholder.png",
+    "condition": "preprocessed",
+    "location": "Berlin, Germany",
+    "avatar": "/images/avatar.jpeg",
+    "productID": "P6564",
+    "supply": "23 CFT",
+    "status": "rejected"
+  },
+  {
+    "thumbnail": "/images/placeholder.png",
+    "condition": "raw",
+    "location": "Berlin, Germany",
+    "avatar": "/images/avatar.jpeg",
+    "productID": "P6564",
+    "supply": "23 CFT",
+    "status": "approved"
+  },
+  {
+    "thumbnail": "/images/placeholder.png",
+    "condition": "preprocessed",
+    "location": "Berlin, Germany",
+    "avatar": "/images/avatar.jpeg",
+    "productID": "P6564",
+    "supply": "23 CFT",
+    "status": "pending"
+  },
+  {
+    "thumbnail": "/images/placeholder.png",
+    "condition": "preprocessed",
+    "location": "Berlin, Germany",
+    "avatar": "/images/avatar.jpeg",
+    "productID": "P6564",
+    "supply": "23 CFT",
+    "status": "approved"
+  },
+  {
+    "thumbnail": "/images/placeholder.png",
+    "condition": "preprocessed",
+    "location": "Berlin, Germany",
+    "avatar": "/images/avatar.jpeg",
+    "productID": "P6564",
+    "supply": "23 CFT",
+    "status": "approved"
+  },
+  {
+    "thumbnail": "/images/placeholder.png",
+    "condition": "preprocessed",
+    "location": "Berlin, Germany",
+    "avatar": "/images/avatar.jpeg",
+    "productID": "P6564",
+    "supply": "23 CFT",
+    "status": "approved"
+  }
+]

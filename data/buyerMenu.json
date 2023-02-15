@@ -1,0 +1,26 @@
+[
+  {
+    "name": "All Products",
+    "link": "/buyer"
+  },
+  {
+    "name": "Suppliers",
+    "link": "/buyer/supplier"
+  },
+  {
+    "name": "Confirmed order",
+    "link": "/buyer/confirmed-orders"
+  },
+  {
+    "name": "requests",
+    "link": "/buyer/order-request"
+  },
+  {
+    "name": "history",
+    "link": "/buyer/order-history"
+  },
+  {
+    "name": "map",
+    "link": "/map"
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "amount": "12 CFT",
+    "date": "23 Feb 23",
+    "latitude": "12.345643",
+    "longitude": "12.345643",
+    "price": "€3"
+  },
+  {
+    "amount": "13 CFT",
+    "date": "23 Feb 23",
+    "latitude": "12.345643",
+    "longitude": "12.345643",
+    "price": "€4"
+  },
+  {
+    "amount": "14 CFT",
+    "date": "23 Feb 23",
+    "latitude": "12.345643",
+    "longitude": "12.345643",
+    "price": "€5"
+  }
+]
