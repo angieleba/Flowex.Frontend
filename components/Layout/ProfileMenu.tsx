@@ -1,5 +1,6 @@
-import { Avatar, Box, Flex, Text } from '@chakra-ui/react';
+import { Avatar, Box, Flex, Text, Badge } from '@chakra-ui/react';
 import { useAuthStore } from 'store/AuthStore';
+import { Role } from 'types/enums';
 
 const ProfileMenu = () => {
   const { role } = useAuthStore();
@@ -10,7 +11,9 @@ const ProfileMenu = () => {
       <Text fontSize="sm" fontWeight="bold">
         @user420 <br />
         <Box as="span" fontSize="xs" fontStyle="italic">
-          {role}
+          <Badge variant='outline' colorScheme={role==Role.SUPPLIER ? 'teal' : 'yellow'}>
+          {role} account
+          </Badge> 
         </Box>
       </Text>
     </Flex>
