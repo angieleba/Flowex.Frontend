@@ -10,6 +10,8 @@ import {
   HStack,
   Button,
 } from '@chakra-ui/react';
+import Link from 'next/link';
+
 import Pagination from '../Pagination/Pagination';
 import PageSize from '../Pagination/PageSize';
 import ongoingOrders from 'data/ongoingOrders.json';
@@ -24,7 +26,6 @@ const OrderListTable = () => {
           <Tr _odd={{ bgColor: 'transparent' }}>
             <Th>Buyer</Th>
             <Th>Contact</Th>
-            <Th>Price (In EURO)</Th>
             <Th>Order Req</Th>
             <Th>Order Approval</Th>
             <Th>Delivery</Th>
@@ -32,6 +33,7 @@ const OrderListTable = () => {
             <Th>Product ID</Th>
             <Th>Status</Th>
             <Th>Action</Th>
+            <Th></Th>
           </Tr>
         </Thead>
         <Tbody>
@@ -41,7 +43,7 @@ const OrderListTable = () => {
                 <Avatar name={item.buyer} size="xs" /> {item.buyer}
               </Td>
               <Td>{item.contact}</Td>
-              <Td>{item.price}</Td>
+           
               <Td>{item.requestDate}</Td>
               <Td>{item.approvalDate}</Td>
               <Td>{item.deliveryDate}</Td>
@@ -53,8 +55,15 @@ const OrderListTable = () => {
 
               <Td>
                 <Button size="xs" py="4" px="2">
-                  Details
+                  Update status
                 </Button>
+              </Td>
+              <Td>
+                <Link href="/supplier/order/1">
+                  <Button size="xs" py="4" px="2">
+                    Details
+                  </Button>
+                </Link>
               </Td>
             </Tr>
           ))}
