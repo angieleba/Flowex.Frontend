@@ -1,6 +1,7 @@
 import { Avatar, Box, Button, Flex, Text } from '@chakra-ui/react';
 import Link from 'next/link';
 
+
 interface Props {
   description: string;
   supplier: string;
@@ -13,13 +14,13 @@ const ConfirmCard = (props: Props) => {
   const { description, supplier, company, contact, location } = props;
 
   return (
-    <Box w="328px">
+    <Box w="500px">
       <Link href="/buyer/product/1">
+
         <Box border="1px" borderColor="brand.blue" rounded="3xl" p={4}>
           <Text fontSize="md" fontWeight="bold">
             {description}
           </Text>
-
           <Flex justifyContent="space-between" alignItems="center" mt="4">
             <Box>
               <Text fontSize="sm" fontWeight="bold">
@@ -43,6 +44,7 @@ const ConfirmCard = (props: Props) => {
           </Flex>
         </Box>
       </Link>
+
       <Flex justifyContent="center" mt={2}>
         <Link href="/buyer/order/1/confirm">
           <Button
@@ -51,7 +53,7 @@ const ConfirmCard = (props: Props) => {
             color="brand.blue"
             _hover={{ bgColor: 'brand.blue', color: 'white' }}
           >
-            Confirm Order
+            Update Status
           </Button>
         </Link>
       </Flex>

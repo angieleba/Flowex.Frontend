@@ -1,22 +1,18 @@
 [
   {
-    "name": "All Products 🔍",
+    "name": "Search Products 🔍",
     "link": "/buyer"
   },
   {
-    "name": "Suppliers 🔍",
+    "name": "Search Suppliers 🔍",
     "link": "/buyer/supplier"
   },
   {
-    "name": "Order requests 📬",
+    "name": "All orders 📦",
     "link": "/buyer/order-request"
   },
   {
-    "name": "All orders 📦",
-    "link": "/buyer/confirmed-orders"
-  },
-  {
-    "name": "history 📜",
+    "name": "Summary 📝",
     "link": "/buyer/order-history"
   },
   {

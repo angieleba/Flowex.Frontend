@@ -5,7 +5,7 @@ import OrderRequestTable from 'components/Buyer/OrderRequestTable';
 const OrderRequest: NextPage = () => {
   return (
     <Container maxW="container.xl" py={20} overflowX="hidden">
-      <Heading size="lg">Order Requests</Heading>
+      <Heading size="lg">All Orders</Heading>
       <OrderRequestTable />
     </Container>
   );

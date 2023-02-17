@@ -8,8 +8,9 @@ import {
   Td,
   Avatar,
   HStack,
-  Button,
+  Button
 } from '@chakra-ui/react';
+import Link from 'next/link';
 import Pagination from '../Pagination/Pagination';
 import PageSize from '../Pagination/PageSize';
 import ongoingOrders from 'data/ongoingOrders.json';
@@ -24,14 +25,13 @@ const OrderRequestTable = () => {
           <Tr _odd={{ bgColor: 'transparent' }}>
             <Th>Seller</Th>
             <Th>Contact</Th>
-            <Th>Price (In EURO)</Th>
             <Th>Order Req</Th>
             <Th>Order Approval</Th>
             <Th>Delivery</Th>
             <Th>Location</Th>
             <Th>Product ID</Th>
             <Th>Status</Th>
-            <Th>Action</Th>
+            <Th>Get Details</Th>
           </Tr>
         </Thead>
         <Tbody>
@@ -41,7 +41,6 @@ const OrderRequestTable = () => {
                 <Avatar name={item.buyer} size="xs" /> {item.buyer}
               </Td>
               <Td>{item.contact}</Td>
-              <Td>{item.price}</Td>
               <Td>{item.requestDate}</Td>
               <Td>{item.approvalDate}</Td>
               <Td>{item.deliveryDate}</Td>
@@ -50,8 +49,10 @@ const OrderRequestTable = () => {
               <Td>
                 <Status status={item.status as OrderStatus} />
               </Td>
+            
 
               <Td>
+              <Link href="/buyer/order/1/confirm">
                 <Button
                   size="xs"
                   py="4"
@@ -62,6 +63,22 @@ const OrderRequestTable = () => {
                 >
                   Details
                 </Button>
+                </Link>
+              </Td>
+
+              <Td>
+          
+                <Button
+                  size="xs"
+                  py="4"
+                  px="2"
+                  bgColor="brand.yellow"
+                  color="brand.blue"
+                  _hover={{ bg: 'brand.blue', color: 'white' }}
+                >
+                  Update status
+                </Button>
+             
               </Td>
             </Tr>
           ))}

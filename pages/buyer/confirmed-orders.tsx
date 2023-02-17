@@ -7,7 +7,7 @@ const ConfirmedOrders: NextPage = () => {
   return (
     <Container maxW="container.xl" py={20} overflowX="hidden">
       <Flex justifyContent="space-between" gap={5} direction={{ base: 'column', md: 'row' }}>
-        <Heading size="lg">Product List</Heading>
+        <Heading size="lg">All Orders</Heading>
         <Input
           color="brand.blue"
           type="search"

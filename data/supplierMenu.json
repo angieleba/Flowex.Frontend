@@ -1,26 +1,26 @@
 [
   {
-    "name": "Add",
-    "link": "/supplier/add-product"
-  },
-  {
-    "name": "all products",
+    "name": "My products 🪵",
     "link": "/supplier"
   },
   {
-    "name": "history",
-    "link": "/supplier/history"
+    "name": "Add Product",
+    "link": "/supplier/add-product"
   },
   {
-    "name": "map",
-    "link": "/map"
-  },
-  {
-    "name": "request",
+    "name": "Order requests 📬",
     "link": "/supplier/order-request"
   },
   {
-    "name": "Ongoing",
+    "name": "All Orders 📦",
     "link": "/supplier/ongoing-orders"
+  },
+  {
+    "name": "Summary 📝",
+    "link": "/supplier/history"
+  },
+  {
+    "name": "map 🗺️",
+    "link": "/map"
   }
 ]
