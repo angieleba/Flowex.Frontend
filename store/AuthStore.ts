@@ -13,13 +13,18 @@ interface AuthState {
 export const useAuthStore = create<AuthState>()(
   persist(
     (set) => ({
-      logout: () => {
-        set({}, true);
+      logout: () => {       
+        // set({}, true);
+        set({token: ""}); 
         Router.push('/').then(() => {
           toast.info('Logged out!');
         });
       },
+      // login: () => {
+      //   set({}, false);
+      // }
     }),
+   
     {
       name: 'auth',
     }
