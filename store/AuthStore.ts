@@ -14,15 +14,12 @@ export const useAuthStore = create<AuthState>()(
   persist(
     (set) => ({
       logout: () => {       
-        // set({}, true);
         set({token: ""}); 
+        set({role: Role.DEFAULT}); 
         Router.push('/').then(() => {
           toast.info('Logged out!');
         });
-      },
-      // login: () => {
-      //   set({}, false);
-      // }
+      }
     }),
    
     {
