@@ -4,10 +4,6 @@
     "link": "/supplier"
   },
   {
-    "name": "Add Product",
-    "link": "/supplier/add-product"
-  },
-  {
     "name": "Order requests 📬",
     "link": "/supplier/order-request"
   },

@@ -5,6 +5,7 @@ import AddProductForm from 'components/Forms/AddProductForm';
 const AddProduct: NextPage = () => {
   return (
     <Container maxW="container.xl" py={20} overflowX="hidden">
+
       <Box>
         <AddProductForm />
       </Box>

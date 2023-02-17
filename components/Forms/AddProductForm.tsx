@@ -16,6 +16,7 @@ import { ProductSchema } from 'schema/ProductSchema';
 import { ProductPayload } from 'types/product';
 import SelectInput from 'components/Inputs/SelectInput';
 import RadioInput from 'components/Inputs/RadioInput';
+import { useRouter } from 'next/router'
 
 const AddProductForm = () => {
   const {
@@ -24,8 +25,10 @@ const AddProductForm = () => {
     formState: { errors },
   } = useForm<ProductPayload>({ resolver: yupResolver(ProductSchema) });
 
+  const router = useRouter()
   const handleFormSubmit = (data: ProductPayload) => {
     console.log(data);
+    router.push('/supplier')
   };
 
   return (
