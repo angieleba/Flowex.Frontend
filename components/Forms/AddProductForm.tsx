@@ -17,8 +17,12 @@ import { ProductPayload } from 'types/product';
 import SelectInput from 'components/Inputs/SelectInput';
 import RadioInput from 'components/Inputs/RadioInput';
 import { useRouter } from 'next/router'
+import { Web3Storage } from 'web3.storage'
 
 const AddProductForm = () => {
+  const web3StorageToken = process.env.NEXT_PUBLIC_WEB3_STORAGE as string;
+  
+  const client = new Web3Storage({ token: web3StorageToken })
   const {
     register,
     handleSubmit,
@@ -26,9 +30,17 @@ const AddProductForm = () => {
   } = useForm<ProductPayload>({ resolver: yupResolver(ProductSchema) });
 
   const router = useRouter()
-  const handleFormSubmit = (data: ProductPayload) => {
-    console.log(data);
-    router.push('/supplier')
+  const handleFormSubmit = async (data: ProductPayload) =>  {
+    console.log(data.file);
+    const imageFile = data.file;
+    const rootCid = await client.put(imageFile) // Promise<CIDString>
+    console.log(rootCid);
+
+    // Get info on the Filecoin deals that the CID is stored in
+    const info = await client.status(rootCid)
+    console.log(info);
+
+    // router.push('/supplier')
   };
 
   return (
@@ -36,12 +48,7 @@ const AddProductForm = () => {
       <Box maxW="600px">
         <Heading size="md">Product Details</Heading>
         <Stack gap={3} pl="8" mt={5}>
-          <TextInput
-            label="Product ID"
-            placeholder="#P78865"
-            register={register('productID')}
-            error={errors?.productID}
-          />
+          
           <TextInput
             label="Tree Name"
             placeholder="Enter name of tree"
@@ -75,6 +82,16 @@ const AddProductForm = () => {
             register={register('unitPrice')}
             error={errors?.unitPrice}
           />
+
+          <RadioInput label="Select Unit" error={errors?.type} defaultValue="CFP" ringColor="red">
+            <Radio value="CBM" {...register('unit')}>
+              CBM
+            </Radio>
+            <Radio value="CFP" {...register('unit')}>
+              CFP
+            </Radio>
+          </RadioInput>
+
           <RadioInput label="Select Type" error={errors?.type} defaultValue="raw" ringColor="red">
             <Radio value="raw" {...register('type')}>
               Raw
@@ -83,6 +100,8 @@ const AddProductForm = () => {
               Preprocessed
             </Radio>
           </RadioInput>
+
+          
 
           <TextInput
             type="file"

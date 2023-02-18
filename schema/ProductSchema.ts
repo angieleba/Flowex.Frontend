@@ -6,6 +6,7 @@ export const ProductSchema = object({
   woodType: string().required('Wood type is required'),
   location: string().required('Location is required'),
   unitPrice: number().required('Price is required'),
+  unit: string().required('Unit is required'),
   type: string().required('Type is required'),
   file: mixed(),
 });

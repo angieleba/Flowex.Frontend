@@ -8,6 +8,7 @@ export interface ProductPayload {
   location: string;
   unitPrice: string;
   type: string;
+  unit: string;
   file: File;
   density: boolean;
   mfa: boolean;
