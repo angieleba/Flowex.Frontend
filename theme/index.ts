@@ -5,16 +5,17 @@ const customTheme = extendTheme({
     global: {
       body: {
         color: 'brand.blue',
-        background: 'gradient.bg',
+        background: 'brand.gray',
       },
     },
   },
   colors: {
     brand: {
+      white: 'FAFAFA',
       black: '#181818',
-      yellow: '#FBBE50',
-      blue: '#292C40',
-      gray: '#FAFAFA',
+      yellow: '#FF724C',
+      blue: '#2A2C41',
+      gray: '#E8E8E8',
       maroon: '#972E27',
       green: '#519727',
     },
