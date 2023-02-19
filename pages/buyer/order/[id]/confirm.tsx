@@ -1,9 +1,47 @@
-import type { NextPage } from 'next';
-import { Box, Button, Container, Heading, Stack } from '@chakra-ui/react';
-import LineItem from 'components/Order/LineItem';
-import { FaLink } from 'react-icons/fa';
+import type { NextPage } from "next";
+import { useEffect, useState } from "react";
+import {
+  Box,
+  Button,
+  Container,
+  Flex,
+  Heading,
+  Stack,
+  Icon,
+  Skeleton,
+  SlideFade,
+  keyframes,
+} from "@chakra-ui/react";
+import LineItem from "components/Order/LineItem";
+import { FaLink, FaMoneyBillWave, FaUser, FaUserTie } from "react-icons/fa";
+import { useRouter } from "next/router";
+
+const slide = keyframes({
+  "0%": {
+    left: "5%",
+  },
+  "50%": {
+    left: "95%",
+  },
+  "100%": {
+    left: "5%",
+  },
+});
 
 const ConfirmOrder: NextPage = () => {
+  const router = useRouter();
+  const [isConfirming, setIsConfirming] = useState(false);
+
+  useEffect(() => {
+    if (isConfirming) {
+      const timeout = setTimeout(() => {
+        router.push("/buyer");
+      }, 5000);
+
+      return () => clearTimeout(timeout);
+    }
+  }, [isConfirming]);
+
   return (
     <Container maxW="container.xl" py={20} overflowX="hidden">
       <Heading size="lg">Product Details</Heading>
@@ -26,7 +64,35 @@ const ConfirmOrder: NextPage = () => {
           <Button variant="link" leftIcon={<FaLink />} mt={5}>
             Certification Link
           </Button>
-          <Button>Confirm Order</Button>
+
+          <SlideFade in={isConfirming} offsetY="20px">
+            <Flex justify="space-between" align="center">
+              <Icon fontSize="2xl" as={FaUser} />
+              <Box
+                flexGrow={1}
+                flexShrink={0}
+                flexBasis={1}
+                px={2}
+                position="relative"
+                zIndex={0}
+              >
+                <Skeleton height={1} rounded="full" />
+                <Icon
+                  fontSize="2xl"
+                  color="brand.yellow"
+                  as={FaMoneyBillWave}
+                  position="absolute"
+                  zIndex={1}
+                  top="50%"
+                  transform="translate(-50%, -50%)"
+                  id="animate-hr"
+                  animation={`${slide} 4s infinite linear`}
+                />
+              </Box>
+              <Icon fontSize="2xl" as={FaUserTie} />
+            </Flex>
+          </SlideFade>
+          <Button onClick={() => setIsConfirming(true)}>Confirm Order</Button>
         </Stack>
       </Box>
     </Container>
