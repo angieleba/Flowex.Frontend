@@ -14,8 +14,10 @@ interface Props {
 }
 
 const ProductCard = (props: Props) => {
-  const { thumbnail, condition, location, avatar, productID, supply, status } = props;
-
+  let { thumbnail, condition, location, avatar, productID, supply, status } = props;
+  let splitted = thumbnail.split(",") 
+  thumbnail = splitted[1];
+  const tree = splitted[0];
   return (
     <Box w="328px">
       <Link href="/supplier/product/1">
@@ -30,7 +32,12 @@ const ProductCard = (props: Props) => {
               {location}
             </Text>
           </Flex>
-
+          <Box>
+          Wood:
+          <Text fontSize="md" fontWeight="semibold">
+              {tree}
+            </Text>
+          </Box>
           <Flex justifyContent="space-between" alignItems="center" mt="1">
             <Flex gap={1} alignItems="center">
               <Avatar name={productID} src={avatar} />

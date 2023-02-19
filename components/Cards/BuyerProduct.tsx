@@ -1,4 +1,5 @@
 import { Avatar, Box, Button, Flex, Image, Text } from '@chakra-ui/react';
+import { log } from 'console';
 import Link from 'next/link';
 import { OrderStatus } from 'types/product';
 
@@ -10,10 +11,18 @@ interface Props {
   productID: string;
   supply: string;
   status: OrderStatus;
+  company: string;
+  name: string;
+  contract: string;
+
 }
 
 const BuyerProduct = (props: Props) => {
-  const { thumbnail, condition, location, avatar, productID, supply } = props;
+  let { thumbnail, condition, location, avatar, productID, supply, company, name, contract } = props;
+  
+  let splitted = thumbnail.split(",") 
+  thumbnail = splitted[1];
+  const tree = splitted[0];
 
   return (
     <Box w="328px">
@@ -32,18 +41,22 @@ const BuyerProduct = (props: Props) => {
 
           <Flex justifyContent="space-between" alignItems="center" mt="1">
             <Box>
-              <Text fontSize="sm" fontWeight="bold">
-                Contact Name
+            <Text fontSize="sm" fontWeight="bold">
+                Company: {company}
               </Text>
-              <Text fontSize="sm" fontWeight="medium">
-                Supply {supply}
-              </Text>
-            </Box>
-            <Flex gap={1} alignItems="center">
+              
+              </Box>
+              <Box>
               <Text fontSize="sm" fontWeight="bold">
-                Company
+                {contract} <br/> {name}
               </Text>
               <Avatar name={productID} src={avatar} />
+            </Box>
+            <Flex gap={1} alignItems="center">
+            <Text fontSize="sm" fontWeight="medium">
+                Supply {supply}
+              </Text>
+              
             </Flex>
           </Flex>
         </Box>

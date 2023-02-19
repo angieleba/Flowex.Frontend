@@ -25,7 +25,7 @@ const Buyer: NextPage = () => {
 
       <SimpleGrid columns={[1, 2]} gap={10} placeItems="center" mt={10}>
         {supplierProducts.map((product, idx) => (
-          <BuyerProduct key={idx} {...product} status={product.status as OrderStatus} />
+          <BuyerProduct contract={''} key={idx} {...product} status={product.status as OrderStatus} />
         ))}
       </SimpleGrid>
     </Container>
