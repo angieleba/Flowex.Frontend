@@ -1,26 +1,52 @@
-import { Box, Text, Container, Flex, HStack, Icon, Divider } from '@chakra-ui/react';
-import { IoLogoInstagram, IoLogoFacebook, IoLogoTwitter, IoLogoYoutube } from 'react-icons/io5';
-import Logo from '../Logo/Logo';
-import MenuLink from '../MenuLink/MenuLink';
-import menuLinks from 'data/menuLinks.json';
+import {
+  Box,
+  Text,
+  Container,
+  Flex,
+  HStack,
+  Icon,
+  Divider,
+} from "@chakra-ui/react";
+import {
+  IoLogoInstagram,
+  IoLogoFacebook,
+  IoLogoTwitter,
+  IoLogoYoutube,
+} from "react-icons/io5";
+import Logo from "../Logo/Logo";
+import MenuLink from "../MenuLink/MenuLink";
+import menuLinks from "data/menuLinks.json";
 
 const Footer = () => {
   return (
     <Box as="footer">
       <Container
         maxW="container.xl"
-        bg="gradient.footer"
+        bg="brand.blue"
+        color="white"
         borderTopRadius="40px"
         py="10"
         px={{ base: 5, md: 20 }}
       >
-        <Flex justifyContent="space-between" gap={5} flexDir={{ base: 'column', md: 'row' }}>
-          <HStack gap={{ base: 5, md: 10 }} flexDir={{ base: 'column', md: 'row' }}>
+        <Flex
+          justifyContent="space-between"
+          gap={5}
+          flexDir={{ base: "column", md: "row" }}
+        >
+          <HStack
+            gap={{ base: 5, md: 10 }}
+            flexDir={{ base: "column", md: "row" }}
+          >
             {menuLinks.map((item) => (
-              <MenuLink key={item.name} text={item.name} link={item.link} />
+              <MenuLink
+                key={item.name}
+                text={item.name}
+                link={item.link}
+                inactiveColor="white"
+              />
             ))}
           </HStack>
-          <HStack gap="5" justifyContent={{ base: 'center', md: 'initial' }}>
+          <HStack gap="5" justifyContent={{ base: "center", md: "initial" }}>
             <Icon as={IoLogoFacebook} fontSize="2xl" />
             <Icon as={IoLogoTwitter} fontSize="2xl" />
             <Icon as={IoLogoInstagram} fontSize="2xl" />
@@ -31,7 +57,7 @@ const Footer = () => {
         <Flex
           justifyContent="space-between"
           alignItems="center"
-          flexDir={{ base: 'column-reverse', md: 'row' }}
+          flexDir={{ base: "column-reverse", md: "row" }}
           gap="5"
         >
           <Text fontSize="sm" fontWeight="medium">
