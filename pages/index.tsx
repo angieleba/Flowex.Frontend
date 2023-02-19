@@ -1,6 +1,14 @@
-import type { NextPage } from 'next';
-import { Box, Button, Container, Heading, HStack, Stack, Text } from '@chakra-ui/react';
-import Link from 'next/link';
+import type { NextPage } from "next";
+import {
+  Box,
+  Button,
+  Container,
+  Heading,
+  HStack,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
@@ -59,16 +67,17 @@ const Home: NextPage = () => {
           </Heading>
 
           <Text fontSize="lg" fontWeight="medium" maxW="600px">
-            Discover the finest selection of wood products at the click of a button. Our online
-            platform connects you with a wide range of high-quality wood options for all your needs.
+            Discover the finest selection of wood products at the click of a
+            button. Our online platform connects you with a wide range of
+            high-quality wood options for all your needs.
           </Text>
 
-          <HStack justifyContent="center" maxW="600px">
+          <HStack maxW="600px">
             <Link href="/registration">
               <Button
                 bgColor="brand.yellow"
                 color="brand.blue"
-                _hover={{ bgColor: 'brand.blue', color: 'white' }}
+                _hover={{ bgColor: "brand.blue", color: "white" }}
               >
                 Join Now
               </Button>
@@ -77,7 +86,11 @@ const Home: NextPage = () => {
           </HStack>
         </Stack>
 
-        <Box overflow="hidden" display={{ base: 'none', md: 'inherit' }} pt="10">
+        <Box
+          overflow="hidden"
+          display={{ base: "none", md: "inherit" }}
+          pt="10"
+        >
           <Box
             width="300px"
             height="300px"
